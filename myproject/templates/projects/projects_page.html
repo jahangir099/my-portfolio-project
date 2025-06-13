@@ -1,0 +1,74 @@
+{% extends 'commom_code/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/projects_page.css' %}">
+{% endblock %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<section class="projects-section">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Take a look at some of the projects I've worked on recently.</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="{% static 'images/portfolio.jpg' %}" alt="Project 1">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio website built using Django, HTML, and CSS. Fully responsive and stylish.</p>
+          <a href="#" class="btn">View Site</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="{% static 'images/blog.jpg' %}" alt="Project 2">
+        <div class="project-info">
+          <h3>Blog Application</h3>
+          <p>A full-featured blog site with user login, post editor, and comment system — built with Django.</p>
+          <a href="#" class="btn">Read Blog</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="{% static 'images/ecommerce.jpg' %}" alt="Project 3">
+        <div class="project-info">
+          <h3>E-commerce Store</h3>
+          <p>Mini e-commerce platform with cart, product pages, and checkout. Backend in Django + SQLite.</p>
+          <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="{% static 'images/task.jpg' %}" alt="Project 4">
+        <div class="project-info">
+          <h3>Task Manager</h3>
+          <p>Web app to manage daily tasks with categories and deadline tracker. Clean and modern UI.</p>
+          <a href="#" class="btn">Manage Tasks</a>
+        </div>
+      </div>
+      <div class="project-card">
+  <img src="{% static 'images/weather.jpg' %}" alt="Project 5">
+  <div class="project-info">
+    <h3>Weather App</h3>
+    <p>Responsive weather forecast app using OpenWeatherMap API and Django backend integration.</p>
+    <a href="#" class="btn">Check Weather</a>
+  </div>
+</div>
+
+<div class="project-card">
+  <img src="{% static 'images/quiz.png' %}" alt="Project 6">
+  <div class="project-info">
+    <h3>Quiz Platform</h3>
+    <p>Interactive quiz app with real-time scoring, timer, and MCQs built with Django & JavaScript.</p>
+    <a href="#" class="btn">Take Quiz</a>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+{% endblock %}

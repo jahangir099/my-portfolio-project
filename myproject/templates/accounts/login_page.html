@@ -1,0 +1,52 @@
+
+{% extends 'commom_code/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login_page.css' %}">
+{% endblock %}
+
+{% block title %}login{% endblock %}
+
+
+
+
+
+
+{% block content %}
+<form method="POST" novalidate>
+  {% csrf_token %}
+
+
+<!-- Show error or success messages -->
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert {% if message.tags %}{{ message.tags }}{% endif %}">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+  <!-- Username field -->
+  <div class="form-group">
+    {{ form.username.label_tag }}
+    {{ form.username }}
+    {{ form.username.errors }}
+  </div>
+
+  <!-- Password field -->
+  <div class="form-group">
+    {{ form.password.label_tag }}
+    {{ form.password }}
+    {{ form.password.errors }}
+  </div>
+
+  <!-- Submit button -->
+  <button class="submit_btn" type="submit">Login</button>
+
+  <div class="forgot-password">
+    <a href="#">Forgot your password?</a>
+  </div>
+</form>
+
+</div>
+{% endblock %}

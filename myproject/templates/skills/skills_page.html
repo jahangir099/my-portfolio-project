@@ -1,0 +1,66 @@
+{% extends 'commom_code/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/skills_page.css' %}">
+{% endblock %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+
+
+
+<!-- Skills Section -->
+<section class="skills-section">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <i class="fab fa-python"></i>
+      <h3>Python</h3>
+      <p>Strong command over Python for web development and scripting.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-js-square"></i>
+      <h3>JavaScript</h3>
+      <p>Experience with DOM manipulation and dynamic interactivity.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-html5"></i>
+      <h3>HTML5</h3>
+      <p>Semantic, accessible, and well-structured HTML layout building.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-css3-alt"></i>
+      <h3>CSS3</h3>
+      <p>Responsive design, animations, and layout structuring.</p>
+    </div>
+    <div class="skill-card">
+     <div class="icon" style="font-size: 2rem;">🟩</div>
+      <h3>Django</h3>
+      <p>Full-stack web development with Django and REST APIs.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-database"></i>
+      <h3>SQL</h3>
+      <p>Database design, queries, and optimization using SQL.</p>
+    </div>
+    <div class="skill-card">
+  <div class="icon">
+    <i class="fab fa-bootstrap"></i>
+  </div>
+  <h3>Bootstrap</h3>
+  <p>CSS framework for fast, responsive, and consistent UI design.</p>
+</div>
+<div class="skill-card">
+  <div class="icon">
+    <i class="fas fa-wind"></i>
+  </div>
+  <h3>Tailwind CSS</h3>
+  <p>Utility-first CSS framework for building modern web interfaces.</p>
+</div>
+
+
+  </div>
+</section>
+
+{% endblock %}

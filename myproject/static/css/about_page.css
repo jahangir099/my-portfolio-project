@@ -1,0 +1,140 @@
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-box {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: slideInDown 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.about-name:hover {
+  color: #3498db;
+}
+
+.about-short-intro {
+  font-size: 1.3rem;
+  color: #555;
+  margin-top: 0.7rem;
+}
+
+.bio-box {
+  margin-top: 3rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.bio-box h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-bio {
+  line-height: 1.7;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.photo-box {
+  margin-top: 3rem;
+  text-align: center;
+  animation: zoomIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-photo {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.about-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .about-name {
+    font-size: 2rem;
+  }
+
+  .about-short-intro {
+    font-size: 1.1rem;
+  }
+
+  .bio-box {
+    padding: 1.5rem;
+  }
+
+  .about-bio {
+    font-size: 1rem;
+  }
+
+  .about-photo {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+}

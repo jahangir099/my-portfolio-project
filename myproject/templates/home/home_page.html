@@ -1,0 +1,47 @@
+{% extends 'commom_code/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+{% endblock %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+
+<main class="hero">
+  <div class="hero-shape"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="highlight">Coder Bro</span></h1>
+      <h2>Passionate Django Web Developer</h2>
+      <p>
+        I specialize in building clean, dynamic websites using Django, HTML, CSS, and JavaScript. I'm currently learning full-stack development and love solving real-world problems through code.
+        <br /><br />
+        My journey started with Python and quickly evolved into crafting full web apps using Django. I'm constantly exploring new tools, improving my UI/UX skills, and writing clean backend logic.
+      </p>
+      <ul class="bio-list">
+        <li><strong>🎓 Learning:</strong> Django, REST APIs, Tailwind</li>
+        <li><strong>⚡ Skills:</strong> Python, HTML, CSS, Git</li>
+        <li><strong>📍 Location:</strong> Bangladesh (remote friendly!)</li>
+      </ul>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn-outline">Let's Connect</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <img src="{% static 'images/developer.jpg' %}" alt="Coder Bro" class="your-img-class" />
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+

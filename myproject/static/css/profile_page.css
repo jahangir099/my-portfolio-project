@@ -1,0 +1,50 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+}
+
+.profile-card h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.info-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.logout-btn {
+  display: inline-block;
+  background-color: #e53935;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c62828;
+}

@@ -1,0 +1,34 @@
+{% extends 'commom_code/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about_page.css' %}">
+{% endblock %}
+
+{% block title %}About{% endblock %}
+
+
+
+
+
+{% block content %}
+<section class="about-section">
+
+  <div class="intro-box">
+    <h1 class="about-name">{{ about.name }}</h1>
+    <p class="about-short-intro">{{ about.short_intro }}</p>
+  </div>
+
+  <div class="bio-box">
+    <h3>About Me</h3>
+    <p class="about-bio">{{ about.bio|linebreaks }}</p>
+  </div>
+
+  {% if about.photo %}
+  <div class="photo-box">
+    <img src="{{ about.photo.url }}" alt="{{ about.name }}" class="about-photo" >
+  </div>
+  {% endif %}
+
+
+</section>
+{% endblock %}

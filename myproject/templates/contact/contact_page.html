@@ -1,0 +1,51 @@
+
+{% extends 'commom_code/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact_page.css' %}">
+
+{% endblock %}
+
+{% block title %}Contact{% endblock %}
+
+
+{% block content %}
+  <section class="contact-section">
+    <div class="contact-container">
+      
+      <div class="contact-info">
+        <h3>My Contact Info:</h3>
+        <ul>
+          <li><strong>Name:</strong> Coder Bro</li>
+          <li><strong>Email:</strong> coderbro@example.com</li>
+          <li><strong>Phone:</strong> +880123456789</li>
+          <li><strong>Location:</strong> Dhaka, Bangladesh</li>
+        </ul>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send Me a Message</h3>
+        <form method="post">
+          {% csrf_token %}
+          <label for="id_name">Name</label>
+          {{ form.name }}
+
+          <label for="id_email">Email</label>
+          {{ form.email }}
+
+          <label for="id_phone">Phone</label>
+          {{ form.phone }}
+
+          <label for="id_subject">Subject</label>
+          {{ form.subject }}
+
+          <label for="id_message">Message</label>
+          {{ form.message }}
+
+          <button type="submit" class="submit-btn">Send</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}
